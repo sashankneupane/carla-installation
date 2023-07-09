@@ -21,7 +21,7 @@ sudo ./carla_installaion.sh
 ### Copy PythonAPI folder into your host machine
 Again, first make `makePythonAPI.sh` executable, then execute it:
 ```
-chmodx +x makePythonAPI.sh
+chmod +x makePythonAPI.sh
 sudo ./makePythonAPI.sh
 ```
 This will copy the PythonAPI inside this repository.
