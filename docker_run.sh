@@ -1,5 +1,7 @@
 #!/bin/bash
 
+xhost local:
+
 # Run the Docker container
 docker run \
   -p 2000-2002:2000-2002 \
@@ -12,3 +14,4 @@ docker run \
   carlasim/carla \
   ./CarlaUE4.sh -opengl $1
 
+xhost -
