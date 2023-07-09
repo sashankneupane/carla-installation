@@ -14,9 +14,11 @@ fi
 mkdir PythonAPI
 cd PythonAPI
 
-
 # Set python alias
 alias python=python3.7
+
+python3.7 -m venv carla-venv
+source carla-venv/bin/activate
 
 # Run Docker container and copy files
 container_id=$(docker run --name carla_container --rm -d carlasim/carla:latest)
@@ -24,14 +26,9 @@ container_status=$(docker inspect -f '{{.State.Status}}' $container_id)
 
 if [ "$container_status" == "running" ]; then
   docker cp $container_id:/home/carla/PythonAPI/. .
-
-  # Allow connection from any host
-  sudo xhost +
 else
   echo "The Docker container failed to start. Please check your Docker installation and try again."
 fi
-
-source carla-venv/bin/activate
 
 # Instal carla
 whl_file="./carla/dist/carla-0.9.13-cp37-cp37m-manylinux_2_27_x86_64.whl"
