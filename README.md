@@ -7,7 +7,7 @@ This in an installation guide for CARLA simulator using docker containers.
 ### Clone this repository
 
 ```
-git clone git@github.com:sashankneupane/carla-installation.git
+git clone https://github.com/sashankneupane/carla-installation.git
 cd carla-installation
 ```
 
