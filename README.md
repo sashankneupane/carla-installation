@@ -15,7 +15,7 @@ cd carla-installation
 First make `carla_installation.sh` executable, then execute it:
 ```
 chmod +x carla_installation.sh
-sudo ./carla_installaion.sh
+sudo ./carla_installation.sh
 ```
 
 ### Copy PythonAPI folder into your host machine
