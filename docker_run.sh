@@ -12,6 +12,6 @@ docker run \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -it \
   carlasim/carla \
-  ./CarlaUE4.sh -opengl $1
+  ./CarlaUE4.sh $1
 
 xhost -
